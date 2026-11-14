@@ -10,3 +10,4 @@
 - [x] Verify all pages across desktop, tablet, and mobile.
 - [x] Enlarge the opening headline without covering Clement's face and restore the buttons to the lower left.
 - [x] Add the uploaded favicon and verify uncropped home photos and page layouts across screen sizes.
+- [x] Enlarge cover text, match the two buttons, and verify the shorter lightly cropped cover on phone, tablet, and desktop.

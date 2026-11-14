@@ -33,4 +33,4 @@ use the editor.
 - Keep photo references in the shared content module using CDN asset pointers so page images stay consistent without storing uploaded binaries.
 - Animate notable interview names with right-origin CSS transforms, not font-size or layout changes, to prevent row shifts and respect reduced motion.
 - Mount the pointer-only custom cursor once in the shared layout; use passive pointer events, direct position updates, and a separate animated trail so clicks and touch input stay unaffected.
-- Render the home cover photo at its natural aspect ratio; stack copy above it below desktop widths and overlay copy on desktop to avoid cropping and portrait overlap.
+- Keep home cover copy over a single photo section on every device; use a lower-anchored lightly cropped photo on smaller screens and a full-section photo on desktop so enlarged copy stays clear of the portrait.
