@@ -42,7 +42,7 @@ function Contact() {
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     const parsed = schema.safeParse(form);
-    if (!parsed.success) { setError(parsed.error.issues[0].message); return; }
+    if (!parsed.success) { setError(parsed.error.issues[0]?.message ?? "Please check the form"); return; }
     setError(""); setStatus("sending");
     const d = parsed.data;
     const { error } = await supabase.from("booking_requests").insert({
