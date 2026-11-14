@@ -19,6 +19,7 @@ import p20 from "@/assets/photos/optimized/p20.webp.asset.json";
 import p21 from "@/assets/photos/optimized/p21.webp.asset.json";
 import p22 from "@/assets/photos/optimized/p22.webp.asset.json";
 import p23 from "@/assets/photos/optimized/p23.webp.asset.json";
+import p24 from "@/assets/photos/optimized/p24.webp.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 export const photos = {
@@ -27,7 +28,7 @@ export const photos = {
   miningWeek: assetUrl(p12), podiumSide: assetUrl(p13), miningWeekWide: assetUrl(p14), programmeDirector: assetUrl(p15),
   businessSmile: assetUrl(p16), noExcuse: assetUrl(p17), fieldInterview: assetUrl(p18),
   hero: assetUrl(p19), corporateEvents: assetUrl(p20), liveReporting: assetUrl(p21),
-  classroom: assetUrl(p22), galaHost: assetUrl(p23),
+  classroom: assetUrl(p22), galaHost: assetUrl(p23), journey: assetUrl(p24),
 };
 
 export const tagline = "Award Winning Radio and Television Broadcaster | Panel Moderator | MC";

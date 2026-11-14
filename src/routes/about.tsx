@@ -53,7 +53,7 @@ function About() {
             </div>
           </Reveal>
           <Reveal delay={150} className="img-zoom mx-auto aspect-[3/4] w-full max-w-md md:justify-self-end">
-            <img src={photos.fieldInterview} alt="Clement Manyathela conducting a field interview beside the Radio 702 van" loading="eager" decoding="async" fetchPriority="low" className="h-full w-full object-cover" />
+            <img src={photos.journey} alt="Clement Manyathela speaking at a glass podium on stage in a black suit" loading="eager" decoding="async" fetchPriority="low" className="h-full w-full object-cover" />
           </Reveal>
         </div>
 
