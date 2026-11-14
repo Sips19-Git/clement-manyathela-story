@@ -24,11 +24,11 @@ function Index() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/15 to-ink/95 sm:hidden" />
         <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-ink/85 via-ink/45 to-ink/10 sm:block lg:from-ink/90 lg:via-ink/35" />
         <div className="relative flex min-h-[inherit] w-full flex-col items-start px-5 pb-10 pt-24 sm:px-8 sm:pb-8 lg:px-14 lg:pb-12 lg:pt-28">
-          <p className="max-w-[340px] text-sm font-medium uppercase leading-relaxed text-bronze animate-rise sm:max-w-[480px] sm:text-lg lg:max-w-[520px] lg:text-xl">{tagline}</p>
+          <p className="mt-auto max-w-[240px] text-sm font-medium sm:mt-0 uppercase leading-relaxed text-bronze animate-rise sm:max-w-[480px] sm:text-lg lg:max-w-[520px] lg:text-xl">{tagline}</p>
           <h1 className="mt-3 w-full max-w-[280px] text-[40px] leading-[1] animate-rise [animation-delay:120ms] sm:max-w-[540px] sm:text-[80px] lg:text-[88px] xl:text-[96px]">
             Conversations that move a nation<span className="text-bronze">.</span>
           </h1>
-          <div className="mt-auto w-full pt-8 sm:contents">
+          <div className="w-full pt-6 sm:contents">
           <p className="max-w-[520px] text-lg leading-relaxed sm:mt-5 text-ink-foreground/90 animate-rise [animation-delay:240ms] sm:max-w-[360px] sm:text-2xl lg:max-w-[520px]">
             Host of <em>The Clement Manyathela Show</em> on Radio 702 — and one of South Africa's most sought-after interviewers, speakers and MCs.
           </p>
