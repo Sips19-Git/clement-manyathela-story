@@ -14,12 +14,16 @@ import p15 from "@/assets/photos/p15.png.asset.json";
 import p16 from "@/assets/photos/p16.png.asset.json";
 import p17 from "@/assets/photos/p17.png.asset.json";
 import p18 from "@/assets/photos/p18.png.asset.json";
+import p19 from "@/assets/photos/p19.png.asset.json";
+import p20 from "@/assets/photos/p20.png.asset.json";
+import p21 from "@/assets/photos/p21.png.asset.json";
 
 export const photos = {
   keynote: p3.url, panelBw: p4.url, van702: p5.url, heritage: p6.url, moderating: p7.url,
   hydrogen: p8.url, awards: p9.url, sikuvile: p10.url, studio: p11.url,
   miningWeek: p12.url, podiumSide: p13.url, miningWeekWide: p14.url, programmeDirector: p15.url,
   businessSmile: p16.url, noExcuse: p17.url, fieldInterview: p18.url,
+  hero: p19.url, corporateEvents: p20.url, liveReporting: p21.url,
 };
 
 export const tagline = "Award Winning Radio and Television Broadcaster | Panel Moderator | MC";
@@ -46,5 +50,5 @@ export const interviewees = [
 export const services = [
   { title: "Public Speaking", body: "Keynotes and talks drawn from a decade of interviewing the people shaping the nation.", img: p12.url },
   { title: "Product Launch Events", body: "Polished, high-energy hosting that puts your brand and story centre stage.", img: p15.url },
-  { title: "Corporate Events", body: "Panels, summits and galas moderated with insight, warmth and precision.", img: p7.url },
+  { title: "Corporate Events", body: "Panels, summits and galas moderated with insight, warmth and precision.", img: p20.url },
 ];
