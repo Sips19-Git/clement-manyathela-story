@@ -4,6 +4,10 @@ import { photos, interviewees, education } from "@/lib/content";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
+    links: [
+      { rel: "preconnect", href: new URL(photos.heritage).origin },
+      { rel: "preload", as: "image", href: photos.heritage, fetchPriority: "high" },
+    ],
     meta: [
       { title: "About — Clement Manyathela" },
       { name: "description", content: "From Vaalbank, Mpumalanga to Radio 702: the story of broadcaster Clement Manyathela." },
@@ -25,7 +29,7 @@ function About() {
       <p className="text-center font-display text-xl text-bronze animate-rise">Clement Manyathela</p>
       <section className="mx-auto grid max-w-6xl items-center gap-12 px-10 pb-24 pt-8 md:grid-cols-2 md:px-16">
         <div className="img-zoom mx-auto w-full max-w-md animate-rise">
-          <img src={photos.heritage} alt="Clement Manyathela in traditional attire at a podium" className="aspect-[3/4] w-full object-cover" />
+          <img src={photos.heritage} loading="eager" decoding="async" fetchPriority="high" alt="Clement Manyathela in traditional attire at a podium" className="aspect-[3/4] w-full object-cover" />
         </div>
         <div className="animate-rise [animation-delay:150ms]">
           <h1 className="text-7xl leading-[0.85] md:text-9xl">about<br />me.</h1>
@@ -54,7 +58,7 @@ function About() {
             <p className="eyebrow text-bronze">Notable interviews</p>
             <h2 className="mt-4 text-5xl">He's sat across from<span className="text-bronze">.</span></h2>
             <div className="img-zoom mt-8 aspect-[2/3] w-full max-w-md rounded-lg">
-              <img src={photos.liveReporting} alt="Clement Manyathela reporting live with headphones and a microphone" loading="lazy" className="h-full w-full object-cover" />
+              <img src={photos.liveReporting} alt="Clement Manyathela reporting live with headphones and a microphone" loading="eager" decoding="async" fetchPriority="low" className="h-full w-full object-cover" />
             </div>
           </Reveal>
           <ul className="divide-y divide-border self-start border-y border-border">
@@ -76,7 +80,7 @@ function About() {
             <p className="mt-4 text-lg text-muted-foreground">{education.degree} · {education.period}</p>
             <Link to="/contact" className="btn-pill mt-10 bg-primary text-primary-foreground hover:bg-bronze">Book Clement</Link>
           </Reveal>
-          <Reveal className="img-zoom aspect-[4/3]"><img src={photos.panelBw} alt="Clement moderating a panel" loading="lazy" className="h-full w-full object-cover" /></Reveal>
+          <Reveal className="img-zoom aspect-[4/3]"><img src={photos.panelBw} alt="Clement moderating a panel" loading="eager" decoding="async" fetchPriority="low" className="h-full w-full object-cover" /></Reveal>
         </div>
       </section>
     </main>
