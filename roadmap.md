@@ -8,3 +8,4 @@
 - [x] Reduce home text and reverse the Education columns.
 - [x] Add desktop glowing cursor and footer social icons.
 - [x] Verify all pages across desktop, tablet, and mobile.
+- [ ] Enlarge the opening headline without covering Clement's face and restore the buttons to the lower left.

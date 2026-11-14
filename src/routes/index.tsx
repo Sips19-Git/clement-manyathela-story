@@ -22,15 +22,15 @@ function Index() {
       <section className="home-cover relative flex min-h-[560px] items-start overflow-hidden bg-ink text-ink-foreground">
         <img src={photos.hero} alt="Clement Manyathela smiling in a blue suit at a corporate event" className="absolute inset-0 h-full w-full object-cover object-[65%_center] opacity-80 animate-rise md:object-center" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/10" />
-        <div className="relative w-full px-8 pb-20 pt-32 md:px-14">
+        <div className="relative flex min-h-[inherit] w-full flex-col items-start px-8 pb-20 pt-32 md:px-14">
           <p className="max-w-sm text-sm font-medium uppercase leading-relaxed text-bronze animate-rise md:text-base">{tagline}</p>
-          <h1 className="mt-4 max-w-lg text-[40px] leading-[1.05] animate-rise [animation-delay:120ms] sm:text-5xl md:text-6xl">
+          <h1 className="mt-4 max-w-[480px] text-[48px] leading-[1.05] animate-rise [animation-delay:120ms] sm:text-[64px] md:text-[80px]">
             Conversations that move a nation<span className="text-bronze">.</span>
           </h1>
-          <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-foreground/80 animate-rise [animation-delay:240ms] md:text-xl">
+          <p className="mt-4 max-w-md text-lg leading-relaxed text-ink-foreground/80 animate-rise [animation-delay:240ms] md:text-xl">
             Host of <em>The Clement Manyathela Show</em> on Radio 702 — and one of South Africa's most sought-after interviewers, speakers and MCs.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3 animate-rise [animation-delay:360ms]">
+          <div className="mt-auto flex flex-wrap gap-3 pt-6 animate-rise [animation-delay:360ms]">
             <Link to="/contact" className="btn-pill bg-bronze text-accent-foreground hover:bg-ink-foreground hover:text-ink">Book Clement</Link>
             <Link to="/about" className="btn-pill border border-ink-foreground/40 hover:bg-ink-foreground hover:text-ink">His story</Link>
           </div>
