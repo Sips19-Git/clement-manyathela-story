@@ -22,12 +22,12 @@ function Index() {
       <section className="home-cover relative flex min-h-[560px] items-end overflow-hidden bg-ink text-ink-foreground">
         <img src={photos.hero} alt="Clement Manyathela smiling in a blue suit at a corporate event" className="absolute inset-0 h-full w-full object-cover object-[65%_center] opacity-80 animate-rise md:object-center" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/10" />
-        <div className="relative w-full px-6 pb-20 pt-32 md:px-10">
-          <p className="max-w-md text-[10px] font-medium uppercase leading-relaxed text-bronze animate-rise">{tagline}</p>
-          <h1 className="mt-4 max-w-md text-4xl leading-tight animate-rise [animation-delay:120ms] md:text-5xl">
+        <div className="relative w-full px-8 pb-20 pt-32 md:px-14">
+          <p className="max-w-lg text-xs font-medium uppercase leading-relaxed text-bronze animate-rise">{tagline}</p>
+          <h1 className="mt-4 max-w-lg text-[40px] leading-tight animate-rise [animation-delay:120ms] md:text-[54px]">
             Conversations that move a nation<span className="text-bronze">.</span>
           </h1>
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-foreground/80 animate-rise [animation-delay:240ms]">
+          <p className="mt-4 max-w-md text-base leading-relaxed text-ink-foreground/80 animate-rise [animation-delay:240ms]">
             Host of <em>The Clement Manyathela Show</em> on Radio 702 — and one of South Africa's most sought-after interviewers, speakers and MCs.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 animate-rise [animation-delay:360ms]">
