@@ -11,6 +11,8 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Host of The Clement Manyathela Show on Radio 702. Book Clement for speaking, launches and corporate events." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: photos.hero },
+      { name: "twitter:image", content: photos.hero },
     ],
   }),
   component: Index,

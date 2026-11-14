@@ -11,6 +11,8 @@ export const Route = createFileRoute("/work")({
       { property: "og:description", content: "From Pretoria News to Radio 702: a career in broadcast journalism." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: photos.fieldInterview },
+      { name: "twitter:image", content: photos.fieldInterview },
     ],
   }),
   component: Work,

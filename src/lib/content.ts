@@ -19,14 +19,15 @@ import p20 from "@/assets/photos/p20.png.asset.json";
 import p21 from "@/assets/photos/p21.png.asset.json";
 import p22 from "@/assets/photos/p22.png.asset.json";
 import p23 from "@/assets/photos/p23.png.asset.json";
+import { assetUrl } from "@/lib/asset-url";
 
 export const photos = {
-  keynote: p3.url, panelBw: p4.url, van702: p5.url, heritage: p6.url, moderating: p7.url,
-  hydrogen: p8.url, awards: p9.url, sikuvile: p10.url, studio: p11.url,
-  miningWeek: p12.url, podiumSide: p13.url, miningWeekWide: p14.url, programmeDirector: p15.url,
-  businessSmile: p16.url, noExcuse: p17.url, fieldInterview: p18.url,
-  hero: p19.url, corporateEvents: p20.url, liveReporting: p21.url,
-  classroom: p22.url, galaHost: p23.url,
+  keynote: assetUrl(p3), panelBw: assetUrl(p4), van702: assetUrl(p5), heritage: assetUrl(p6), moderating: assetUrl(p7),
+  hydrogen: assetUrl(p8), awards: assetUrl(p9), sikuvile: assetUrl(p10), studio: assetUrl(p11),
+  miningWeek: assetUrl(p12), podiumSide: assetUrl(p13), miningWeekWide: assetUrl(p14), programmeDirector: assetUrl(p15),
+  businessSmile: assetUrl(p16), noExcuse: assetUrl(p17), fieldInterview: assetUrl(p18),
+  hero: assetUrl(p19), corporateEvents: assetUrl(p20), liveReporting: assetUrl(p21),
+  classroom: assetUrl(p22), galaHost: assetUrl(p23),
 };
 
 export const tagline = "Award Winning Radio and Television Broadcaster | Panel Moderator | MC";
@@ -51,7 +52,7 @@ export const interviewees = [
 ];
 
 export const services = [
-  { title: "Public Speaking", body: "Keynotes and talks drawn from a decade of interviewing the people shaping the nation.", img: p12.url },
-  { title: "Product Launch Events", body: "Polished, high-energy hosting that puts your brand and story centre stage.", img: p15.url },
-  { title: "Corporate Events", body: "Panels, summits and galas moderated with insight, warmth and precision.", img: p20.url },
+  { title: "Public Speaking", body: "Keynotes and talks drawn from a decade of interviewing the people shaping the nation.", img: photos.miningWeek },
+  { title: "Product Launch Events", body: "Polished, high-energy hosting that puts your brand and story centre stage.", img: photos.programmeDirector },
+  { title: "Corporate Events", body: "Panels, summits and galas moderated with insight, warmth and precision.", img: photos.corporateEvents },
 ];
