@@ -34,7 +34,7 @@ function Index() {
           </p>
           <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:flex sm:flex-wrap animate-rise [animation-delay:360ms] lg:mt-auto lg:pt-6">
             <Link to="/contact" className="btn-pill justify-center bg-bronze text-accent-foreground hover:bg-ink-foreground hover:text-ink">Book Clement</Link>
-            <Link to="/about" className="btn-pill justify-center bg-bronze text-accent-foreground hover:bg-ink-foreground hover:text-ink">His story</Link>
+            <Link to="/about" className="btn-pill justify-center border border-ink-foreground/60 bg-transparent text-ink-foreground hover:bg-ink-foreground hover:text-ink">His story</Link>
           </div>
           </div>
         </div>
