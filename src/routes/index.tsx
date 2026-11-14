@@ -20,7 +20,7 @@ function Index() {
   return (
     <main>
       <section className="home-cover relative flex min-h-[560px] items-start overflow-hidden bg-ink text-ink-foreground">
-        <img src={photos.hero} alt="Clement Manyathela smiling in a blue suit at a corporate event" className="absolute inset-0 h-full w-full object-cover object-[65%_center] opacity-80 animate-rise md:object-center" />
+        <img src={photos.hero} alt="Clement Manyathela smiling in a blue suit at a corporate event" className="absolute inset-x-0 bottom-0 h-auto w-full object-cover opacity-80 animate-rise md:inset-0 md:h-full md:object-center" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/10" />
         <div className="relative flex min-h-[inherit] w-full flex-col items-start px-8 pb-20 pt-32 md:px-14">
           <p className="max-w-sm text-sm font-medium uppercase leading-relaxed text-bronze animate-rise md:text-base">{tagline}</p>
