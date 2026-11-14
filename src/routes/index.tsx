@@ -19,25 +19,25 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main>
-      <section className="home-cover relative flex min-h-[560px] items-start overflow-hidden bg-ink text-ink-foreground">
-        <img src={photos.hero} alt="Clement Manyathela smiling in a blue suit at a corporate event" className="absolute inset-x-0 bottom-0 h-auto w-full object-cover opacity-80 animate-rise md:inset-0 md:h-full md:object-center" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/10" />
-        <div className="relative flex min-h-[inherit] w-full flex-col items-start px-8 pb-20 pt-32 md:px-14">
+      <section className="home-cover relative grid overflow-hidden bg-ink text-ink-foreground">
+        <img src={photos.hero} alt="Clement Manyathela smiling in a blue suit at a corporate event" className="col-start-1 row-start-2 h-auto w-full self-end animate-rise lg:row-start-1" />
+        <div className="pointer-events-none col-start-1 row-start-1 hidden bg-gradient-to-r from-ink/90 via-ink/35 to-transparent lg:block" />
+        <div className="relative col-start-1 row-start-1 flex w-full flex-col items-start px-6 pb-10 pt-28 sm:px-8 lg:min-h-[640px] lg:px-14 lg:pb-20 lg:pt-32">
           <p className="max-w-sm text-sm font-medium uppercase leading-relaxed text-bronze animate-rise md:text-base">{tagline}</p>
-          <h1 className="mt-4 max-w-[480px] text-[48px] leading-[1.05] animate-rise [animation-delay:120ms] sm:text-[64px] md:text-[80px]">
+          <h1 className="mt-4 max-w-[480px] text-[44px] leading-[1.05] animate-rise [animation-delay:120ms] sm:text-[64px] lg:text-[80px]">
             Conversations that move a nation<span className="text-bronze">.</span>
           </h1>
           <p className="mt-4 max-w-md text-lg leading-relaxed text-ink-foreground/80 animate-rise [animation-delay:240ms] md:text-xl">
             Host of <em>The Clement Manyathela Show</em> on Radio 702 — and one of South Africa's most sought-after interviewers, speakers and MCs.
           </p>
-          <div className="mt-auto flex flex-wrap gap-3 pt-6 animate-rise [animation-delay:360ms]">
+          <div className="mt-6 flex flex-wrap gap-3 pt-6 animate-rise [animation-delay:360ms] lg:mt-auto">
             <Link to="/contact" className="btn-pill bg-bronze text-accent-foreground hover:bg-ink-foreground hover:text-ink">Book Clement</Link>
             <Link to="/about" className="btn-pill border border-ink-foreground/40 hover:bg-ink-foreground hover:text-ink">His story</Link>
           </div>
         </div>
       </section>
 
-      <section className="relative -mt-8 rounded-t-[2rem] bg-background px-6 pt-24 pb-28">
+      <section className="relative bg-background px-6 pt-24 pb-28">
         <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
           <Reveal className="img-zoom aspect-[4/5]">
             <img src={photos.studio} alt="Clement in the Radio 702 studio" loading="lazy" className="h-full w-full object-cover" />
