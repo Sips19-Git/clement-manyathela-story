@@ -19,8 +19,8 @@ export function GlowingCursor() {
 
     const hide = () => {
       visible = false;
-      dot.dataset.visible = "false";
-      halo.dataset.visible = "false";
+      dot.dataset["visible"] = "false";
+      halo.dataset["visible"] = "false";
     };
     const configure = () => {
       document.documentElement.classList.toggle("custom-cursor-enabled", media.matches);
@@ -40,11 +40,11 @@ export function GlowingCursor() {
       y = event.clientY;
       if (!visible) { tx = x; ty = y; }
       visible = true;
-      dot.dataset.visible = "true";
-      halo.dataset.visible = reduced.matches ? "false" : "true";
+      dot.dataset["visible"] = "true";
+      halo.dataset["visible"] = reduced.matches ? "false" : "true";
       dot.style.transform = `translate3d(${x}px, ${y}px, 0)`;
       const target = event.target;
-      dot.dataset.active = String(target instanceof Element && Boolean(target.closest("a, button:not(:disabled), input, select, textarea, [role='button'], .interview-row, .card-lift")));
+      dot.dataset["active"] = String(target instanceof Element && Boolean(target.closest("a, button:not(:disabled), input, select, textarea, [role='button'], .interview-row, .card-lift")));
       if (!frame) frame = requestAnimationFrame(animate);
     };
     configure();
