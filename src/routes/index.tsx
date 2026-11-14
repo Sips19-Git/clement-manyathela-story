@@ -25,7 +25,7 @@ function Index() {
         <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-ink/85 via-ink/45 to-ink/10 sm:block lg:from-ink/90 lg:via-ink/35" />
         <div className="relative flex min-h-[inherit] w-full flex-col items-start px-5 pb-10 pt-24 sm:px-8 sm:pb-8 lg:px-14 lg:pb-12 lg:pt-28">
           <p className="max-w-[340px] text-sm font-medium uppercase leading-relaxed text-bronze animate-rise sm:max-w-[480px] sm:text-lg lg:max-w-[520px] lg:text-xl">{tagline}</p>
-          <h1 className="mt-3 w-full max-w-[300px] text-[44px] leading-[1] animate-rise [animation-delay:120ms] sm:max-w-[540px] sm:text-[80px] lg:text-[88px] xl:text-[96px]">
+          <h1 className="mt-3 w-full max-w-[280px] text-[40px] leading-[1] animate-rise [animation-delay:120ms] sm:max-w-[540px] sm:text-[80px] lg:text-[88px] xl:text-[96px]">
             Conversations that move a nation<span className="text-bronze">.</span>
           </h1>
           <div className="mt-auto w-full pt-8 sm:contents">
