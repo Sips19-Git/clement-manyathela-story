@@ -19,20 +19,23 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main>
-      <section className="home-cover relative min-h-[740px] overflow-hidden bg-ink text-ink-foreground sm:min-h-[800px] lg:min-h-[720px]">
+      <section className="home-cover relative min-h-[100svh] overflow-hidden bg-ink text-ink-foreground sm:min-h-[800px] lg:min-h-[720px]">
         <img src={photos.hero} alt="Clement Manyathela smiling in a blue suit at a corporate event" className="absolute inset-0 h-full w-full object-cover object-[50%_center] animate-rise lg:object-center" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/45 to-ink/10 lg:from-ink/90 lg:via-ink/35" />
-        <div className="relative flex min-h-[inherit] w-full flex-col items-start px-6 pb-8 pt-24 sm:px-8 lg:px-14 lg:pb-12 lg:pt-28">
-          <p className="max-w-[280px] text-base font-medium uppercase leading-relaxed text-bronze animate-rise sm:max-w-[480px] sm:text-lg lg:max-w-[520px] lg:text-xl">{tagline}</p>
-          <h1 className="mt-4 w-full max-w-[280px] text-[40px] leading-[1] animate-rise [animation-delay:120ms] sm:max-w-[540px] sm:text-[80px] lg:text-[88px] xl:text-[96px]">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/15 to-ink/95 sm:hidden" />
+        <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-ink/85 via-ink/45 to-ink/10 sm:block lg:from-ink/90 lg:via-ink/35" />
+        <div className="relative flex min-h-[inherit] w-full flex-col items-start px-5 pb-10 pt-24 sm:px-8 sm:pb-8 lg:px-14 lg:pb-12 lg:pt-28">
+          <p className="max-w-[340px] text-sm font-medium uppercase leading-relaxed text-bronze animate-rise sm:max-w-[480px] sm:text-lg lg:max-w-[520px] lg:text-xl">{tagline}</p>
+          <h1 className="mt-3 w-full max-w-[300px] text-[44px] leading-[1] animate-rise [animation-delay:120ms] sm:max-w-[540px] sm:text-[80px] lg:text-[88px] xl:text-[96px]">
             Conversations that move a nation<span className="text-bronze">.</span>
           </h1>
-          <p className="mt-5 max-w-[520px] text-xl leading-relaxed text-ink-foreground/90 animate-rise [animation-delay:240ms] sm:max-w-[360px] sm:text-2xl lg:max-w-[520px]">
+          <div className="mt-auto w-full pt-8 sm:contents">
+          <p className="max-w-[520px] text-lg leading-relaxed sm:mt-5 text-ink-foreground/90 animate-rise [animation-delay:240ms] sm:max-w-[360px] sm:text-2xl lg:max-w-[520px]">
             Host of <em>The Clement Manyathela Show</em> on Radio 702 — and one of South Africa's most sought-after interviewers, speakers and MCs.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3 animate-rise [animation-delay:360ms] lg:mt-auto lg:pt-6">
-            <Link to="/contact" className="btn-pill bg-bronze text-accent-foreground hover:bg-ink-foreground hover:text-ink">Book Clement</Link>
-            <Link to="/about" className="btn-pill bg-bronze text-accent-foreground hover:bg-ink-foreground hover:text-ink">His story</Link>
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:flex sm:flex-wrap animate-rise [animation-delay:360ms] lg:mt-auto lg:pt-6">
+            <Link to="/contact" className="btn-pill justify-center bg-bronze text-accent-foreground hover:bg-ink-foreground hover:text-ink">Book Clement</Link>
+            <Link to="/about" className="btn-pill justify-center bg-bronze text-accent-foreground hover:bg-ink-foreground hover:text-ink">His story</Link>
+          </div>
           </div>
         </div>
       </section>
