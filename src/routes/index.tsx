@@ -20,14 +20,14 @@ function Index() {
   return (
     <main>
       <section className="home-cover relative min-h-[740px] overflow-hidden bg-ink text-ink-foreground sm:min-h-[800px] lg:min-h-[720px]">
-        <img src={photos.hero} alt="Clement Manyathela smiling in a blue suit at a corporate event" className="absolute inset-x-0 bottom-0 aspect-[1.65] w-full object-cover animate-rise lg:inset-0 lg:h-full lg:aspect-auto" />
+        <img src={photos.hero} alt="Clement Manyathela smiling in a blue suit at a corporate event" className="absolute inset-x-0 bottom-0 aspect-[1.65] w-full object-cover animate-rise [mask-image:linear-gradient(to_bottom,transparent,black_25%)] lg:inset-0 lg:h-full lg:aspect-auto lg:[mask-image:none]" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink via-ink/50 to-transparent lg:bg-gradient-to-r lg:from-ink/90 lg:via-ink/35" />
         <div className="relative flex min-h-[inherit] w-full flex-col items-start px-6 pb-8 pt-24 sm:px-8 lg:px-14 lg:pb-12 lg:pt-28">
           <p className="max-w-[480px] text-lg font-medium uppercase leading-relaxed text-bronze animate-rise sm:text-xl lg:max-w-[520px] lg:text-2xl">{tagline}</p>
-          <h1 className="mt-4 max-w-[540px] text-[48px] leading-[1] animate-rise [animation-delay:120ms] sm:text-[80px] lg:text-[88px] xl:text-[96px]">
+          <h1 className="mt-4 w-full max-w-[540px] text-[40px] leading-[1] animate-rise [animation-delay:120ms] min-[375px]:text-[48px] sm:text-[80px] lg:text-[88px] xl:text-[96px]">
             Conversations that move a nation<span className="text-bronze">.</span>
           </h1>
-          <p className="mt-5 max-w-[520px] text-xl leading-relaxed text-ink-foreground/90 animate-rise [animation-delay:240ms] sm:text-2xl">
+          <p className="mt-5 max-w-[520px] text-xl leading-relaxed text-ink-foreground/90 animate-rise [animation-delay:240ms] sm:max-w-[360px] sm:text-2xl lg:max-w-[520px]">
             Host of <em>The Clement Manyathela Show</em> on Radio 702 — and one of South Africa's most sought-after interviewers, speakers and MCs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-rise [animation-delay:360ms] lg:mt-auto lg:pt-6">
