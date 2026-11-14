@@ -11,6 +11,8 @@ export const Route = createFileRoute("/about")({
       { property: "og:description", content: "From Vaalbank, Mpumalanga to Radio 702 and SABC's Face The Nation." },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: photos.heritage },
+      { name: "twitter:image", content: photos.heritage },
     ],
   }),
   component: About,

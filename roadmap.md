@@ -1,4 +1,7 @@
 # Requested updates
+- [x] Fix all photo references for external hosting without changing the originals or presentation.
+- [x] Verify images across pages and screen sizes.
+- [ ] Verify the updated Vercel production deployment (waiting for its URL and redeployment).
 - [x] Restore full-width floating navigation.
 - [x] Use the new home and Corporate Events photos.
 - [x] Slightly enlarge the Experience cover.
