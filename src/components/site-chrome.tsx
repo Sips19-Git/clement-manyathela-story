@@ -1,5 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { tagline } from "@/lib/content";
+import { Button } from "@/components/ui/button";
+import { siFacebook, siInstagram, siX, siYoutube, siTiktok, siThreads } from "simple-icons";
+import { Linkedin } from "lucide-react";
+
+const socials = [siFacebook, siInstagram, siX, siYoutube, siTiktok, siThreads];
 
 const nav = [
   { to: "/", label: "Home" },
@@ -11,11 +16,11 @@ const nav = [
 export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-4 z-50">
-      <nav className="flex w-full items-center justify-between gap-4 rounded-full border border-border/60 bg-card/85 px-6 py-3 shadow-lg backdrop-blur transition-shadow md:px-10">
+      <nav className="flex w-full items-center justify-between gap-2 rounded-full border border-border/60 bg-card/85 px-3 py-3 shadow-lg backdrop-blur transition-shadow sm:px-6 md:px-10">
         <Link to="/" className="font-display text-lg transition-colors hover:text-bronze">
           Clement<span className="text-bronze">.</span>
         </Link>
-        <ul className="flex gap-4 text-sm md:gap-6">
+        <ul className="flex gap-3 text-xs sm:gap-4 sm:text-sm md:gap-6">
           {nav.map((n) => (
             <li key={n.to} className={n.to === "/work" ? "hidden sm:block" : ""}>
               <Link to={n.to} activeOptions={{ exact: true }}
@@ -56,6 +61,18 @@ export function SiteFooter() {
             </ul>
             <p className="eyebrow mt-10 text-ink-foreground/50">On air</p>
             <p className="mt-3 text-ink-foreground/80">The Clement Manyathela Show<br />Weekdays · Radio 702</p>
+            <div className="mt-8 flex flex-wrap gap-2" aria-label="Social media platforms">
+              {socials.map((social) => (
+                <Button key={social.slug} asChild variant="ghost" size="icon" className="text-ink-foreground hover:bg-ink-foreground/10 hover:text-bronze">
+                  <a href={`https://www.${social.slug === "x" ? "x" : social.slug}.com/`} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${social.title}`} title={`Visit ${social.title}`}>
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={social.path} /></svg>
+                  </a>
+                </Button>
+              ))}
+              <Button asChild variant="ghost" size="icon" className="text-ink-foreground hover:bg-ink-foreground/10 hover:text-bronze">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn" title="Visit LinkedIn"><Linkedin /></a>
+              </Button>
+            </div>
           </div>
         </div>
         <div className="mt-20 border-t border-ink-foreground/15 pt-8">

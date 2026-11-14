@@ -13,6 +13,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader, SiteFooter } from "../components/site-chrome";
+import { GlowingCursor } from "../components/glowing-cursor";
 
 function NotFoundComponent() {
   return (
@@ -131,6 +132,7 @@ function RootComponent() {
       <SiteHeader />
       <Outlet />
       <SiteFooter />
+      <GlowingCursor />
     </QueryClientProvider>
   );
 }
