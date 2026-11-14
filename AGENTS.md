@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Presentation architecture
+- Keep photo references in the shared content module using CDN asset pointers so page images stay consistent without storing uploaded binaries.
+- Animate notable interview names with right-origin CSS transforms, not font-size or layout changes, to prevent row shifts and respect reduced motion.

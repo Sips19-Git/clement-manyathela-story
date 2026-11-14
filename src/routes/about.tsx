@@ -51,11 +51,15 @@ function About() {
           <Reveal>
             <p className="eyebrow text-bronze">Notable interviews</p>
             <h2 className="mt-4 text-5xl">He's sat across from<span className="text-bronze">.</span></h2>
+            <div className="img-zoom mt-8 aspect-[2/3] w-full max-w-md rounded-lg">
+              <img src={photos.liveReporting} alt="Clement Manyathela reporting live with headphones and a microphone" loading="lazy" className="h-full w-full object-cover" />
+            </div>
           </Reveal>
-          <ul className="divide-y divide-border border-y border-border">
+          <ul className="divide-y divide-border self-start border-y border-border">
             {interviewees.map((n, i) => (
-              <Reveal as="li" key={n} delay={i * 50} className="group flex items-center justify-between py-4 font-display text-2xl transition-[padding,color] duration-300 hover:pl-3 hover:text-bronze">
-                {n}<span className="text-bronze opacity-0 transition-opacity group-hover:opacity-100">✦</span>
+              <Reveal as="li" key={n} delay={i * 50} className="interview-row group relative flex items-center justify-between gap-4 py-5 font-display text-xl transition-colors duration-300 hover:z-10 hover:text-bronze md:text-2xl">
+                <span className="interview-name min-w-0 flex-1">{n}</span>
+                <span aria-hidden="true" className="size-1.5 shrink-0 rounded-full bg-bronze" />
               </Reveal>
             ))}
           </ul>

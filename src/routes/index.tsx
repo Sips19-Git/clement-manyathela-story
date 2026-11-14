@@ -20,7 +20,7 @@ function Index() {
   return (
     <main>
       <section className="relative flex min-h-screen items-end overflow-hidden bg-ink text-ink-foreground">
-        <img src={photos.sikuvile} alt="Clement Manyathela hosting the Sikuvile Journalism Awards" className="absolute inset-0 h-full w-full scale-105 object-cover opacity-60 animate-rise" />
+        <img src={photos.hero} alt="Clement Manyathela smiling in a blue suit at a corporate event" className="absolute inset-0 h-full w-full object-cover object-[65%_center] opacity-80 animate-rise md:object-center" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/10" />
         <div className="relative w-full px-6 pb-24 md:px-10">
           <p className="eyebrow text-bronze animate-rise">{tagline}</p>
