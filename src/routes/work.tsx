@@ -1,12 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Reveal } from "@/components/reveal";
+import { experience, education, photos } from "@/lib/content";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Work — Clement Manyathela" },
-      { name: "description", content: "Shows, interviews, events and highlights from Clement Manyathela." },
-      { property: "og:title", content: "Work — Clement Manyathela" },
-      { property: "og:description", content: "Shows, interviews, events and highlights." },
+      { title: "Experience — Clement Manyathela" },
+      { name: "description", content: "Career of Clement Manyathela: Radio 702, eNCA, e.tv, Eyewitness News, ANN7, Power FM, SABC News Online and Pretoria News." },
+      { property: "og:title", content: "Experience — Clement Manyathela" },
+      { property: "og:description", content: "From Pretoria News to Radio 702: a career in broadcast journalism." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -14,29 +16,40 @@ export const Route = createFileRoute("/work")({
   component: Work,
 });
 
-const items = [
-  { tag: "Radio", title: "The Morning Conversation", body: "Live weekday talk radio on news, politics and society." },
-  { tag: "Interviews", title: "In the Hot Seat", body: "Long-form interviews with leaders and newsmakers." },
-  { tag: "Events", title: "Host & Moderator", body: "Summits, awards ceremonies and corporate panels." },
-  { tag: "Speaking", title: "Keynotes", body: "On media, trust and the art of listening." },
-];
-
 function Work() {
   return (
-    <main className="px-6 pb-24 pt-36">
-      <div className="mx-auto max-w-5xl">
-        <p className="eyebrow text-bronze">Selected work</p>
-        <h1 className="mt-4 text-6xl md:text-8xl">Work<span className="text-bronze">.</span></h1>
-        <div className="mt-16 divide-y divide-border border-y border-border">
-          {items.map((i) => (
-            <article key={i.title} className="grid gap-4 py-10 md:grid-cols-[10rem_1fr_1fr]">
-              <span className="eyebrow text-muted-foreground">{i.tag}</span>
-              <h2 className="text-3xl">{i.title}</h2>
-              <p className="text-muted-foreground">{i.body}</p>
-            </article>
-          ))}
+    <main>
+      <section className="relative flex min-h-[70vh] items-end overflow-hidden bg-ink text-ink-foreground">
+        <img src={photos.van702} alt="Clement on an outside broadcast for Radio 702" className="absolute inset-0 h-full w-full object-cover opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink to-transparent" />
+        <div className="relative mx-auto w-full max-w-5xl px-6 pb-16">
+          <p className="eyebrow text-bronze animate-rise">Career</p>
+          <h1 className="mt-4 text-6xl animate-rise [animation-delay:120ms] md:text-8xl">Experience<span className="text-bronze">.</span></h1>
         </div>
-      </div>
+      </section>
+      <section className="px-6 py-24">
+        <ol className="relative mx-auto max-w-5xl border-l border-bronze/60">
+          {experience.map((e, i) => (
+            <Reveal as="li" key={e.role + e.org} delay={(i % 3) * 80} className="group relative pb-14 pl-10">
+              <span className="absolute -left-[7px] top-2 h-3.5 w-3.5 rounded-full border border-bronze bg-background transition-all duration-300 group-hover:scale-150 group-hover:bg-bronze" />
+              <div className="card-lift grid gap-4 rounded-xl p-6 hover:bg-card md:grid-cols-[12rem_1fr]">
+                <p className="eyebrow pt-2 text-muted-foreground">{e.period}</p>
+                <div>
+                  <h2 className="text-3xl transition-colors group-hover:text-bronze">{e.role}</h2>
+                  <p className="mt-2 font-medium">{e.org}{e.type ? ` · ${e.type}` : ""}</p>
+                  <p className="text-sm text-muted-foreground">{e.place}</p>
+                  {e.body && <p className="mt-3 max-w-xl text-muted-foreground">{e.body}</p>}
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </ol>
+        <Reveal className="mx-auto mt-10 max-w-5xl border-t border-border pt-14">
+          <p className="eyebrow text-bronze">Education</p>
+          <h2 className="mt-4 text-4xl">{education.school}</h2>
+          <p className="mt-2 text-muted-foreground">{education.degree} · {education.period}</p>
+        </Reveal>
+      </section>
     </main>
   );
 }
