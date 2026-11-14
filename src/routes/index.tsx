@@ -16,19 +16,13 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const stats = [
-  { n: "9+", l: "Years in broadcast journalism" },
-  { n: "702", l: "Weekday host on Radio 702" },
-  { n: "3", l: "Newsrooms: radio, TV & print" },
-];
-
 function Index() {
   return (
     <main>
       <section className="relative flex min-h-screen items-end overflow-hidden bg-ink text-ink-foreground">
         <img src={photos.sikuvile} alt="Clement Manyathela hosting the Sikuvile Journalism Awards" className="absolute inset-0 h-full w-full scale-105 object-cover opacity-60 animate-rise" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/10" />
-        <div className="relative mx-auto w-full max-w-6xl px-6 pb-24">
+        <div className="relative w-full px-6 pb-24 md:px-10">
           <p className="eyebrow text-bronze animate-rise">{tagline}</p>
           <h1 className="mt-5 max-w-3xl text-6xl leading-[0.95] animate-rise [animation-delay:120ms] md:text-8xl">
             Conversations that move a nation<span className="text-bronze">.</span>
@@ -43,18 +37,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="-mt-8 relative rounded-t-[2rem] bg-background px-6 py-24">
-        <div className="mx-auto grid max-w-5xl gap-10 text-center md:grid-cols-3">
-          {stats.map((s, i) => (
-            <Reveal key={s.l} delay={i * 120} className="card-lift rounded-2xl p-6">
-              <p className="font-display text-6xl text-bronze">{s.n}</p>
-              <p className="eyebrow mt-3 text-muted-foreground">{s.l}</p>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="px-6 pb-28">
+      <section className="relative -mt-8 rounded-t-[2rem] bg-background px-6 pt-24 pb-28">
         <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
           <Reveal className="img-zoom aspect-[4/5]">
             <img src={photos.studio} alt="Clement in the Radio 702 studio" loading="lazy" className="h-full w-full object-cover" />
@@ -93,13 +76,13 @@ function Index() {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-ink py-20 text-ink-foreground">
-        <Reveal className="mx-auto mb-10 max-w-6xl px-6">
+      <section className="overflow-hidden bg-ink py-8 text-ink-foreground">
+        <Reveal className="mx-auto mb-4 max-w-6xl px-6">
           <p className="eyebrow text-bronze">In conversation with</p>
         </Reveal>
-        <div className="flex w-max animate-marquee gap-12 whitespace-nowrap font-display text-4xl md:text-6xl hover:[animation-play-state:paused]">
+        <div className="flex w-max animate-marquee gap-8 whitespace-nowrap font-display text-lg md:text-2xl hover:[animation-play-state:paused]">
           {[...interviewees, ...interviewees].map((n, i) => (
-            <span key={i} className="flex items-center gap-12 transition-colors hover:text-bronze">{n}<span className="text-bronze">✦</span></span>
+            <span key={i} className="flex items-center gap-8 transition-colors hover:text-bronze">{n}<span className="size-1.5 shrink-0 rounded-full bg-bronze" /></span>
           ))}
         </div>
       </section>
