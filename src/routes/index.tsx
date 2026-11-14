@@ -24,7 +24,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/10" />
         <div className="relative w-full px-8 pb-20 pt-32 md:px-14">
           <p className="max-w-2xl text-sm font-medium uppercase leading-relaxed text-bronze animate-rise md:text-base">{tagline}</p>
-          <h1 className="mt-4 max-w-2xl text-5xl leading-tight animate-rise [animation-delay:120ms] md:text-7xl">
+          <h1 className="mt-4 max-w-3xl text-6xl leading-tight animate-rise [animation-delay:120ms] md:text-8xl">
             Conversations that move a nation<span className="text-bronze">.</span>
           </h1>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-foreground/80 animate-rise [animation-delay:240ms] md:text-xl">
