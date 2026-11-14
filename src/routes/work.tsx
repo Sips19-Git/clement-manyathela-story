@@ -20,7 +20,7 @@ function Work() {
   return (
     <main>
       <section className="relative flex min-h-[70vh] items-end overflow-hidden bg-ink text-ink-foreground">
-        <img src={photos.van702} alt="Clement on an outside broadcast for Radio 702" className="absolute inset-0 h-full w-full object-cover opacity-50" />
+        <img src={photos.fieldInterview} alt="Clement interviewing a guest on an outside broadcast for Radio 702" className="absolute inset-0 h-full w-full object-cover opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink to-transparent" />
         <div className="relative mx-auto w-full max-w-5xl px-6 pb-16">
           <p className="eyebrow text-bronze animate-rise">Career</p>
