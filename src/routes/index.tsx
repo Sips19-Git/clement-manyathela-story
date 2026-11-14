@@ -110,7 +110,7 @@ function Index() {
           <div className="mt-14 grid auto-rows-[220px] grid-cols-2 gap-4 md:grid-cols-4">
             {[
               [photos.keynote, "row-span-2"], [photos.panelBw, ""], [photos.van702, ""],
-              [photos.heritage, "row-span-2"], [photos.hydrogen, "col-span-2"], [photos.awards, ""], [photos.moderating, ""],
+              [photos.heritage, "row-span-2"], [photos.hydrogen, "col-span-2"], [photos.awards, ""], [photos.moderating, "col-span-2"],
             ].map(([src, cls], i) => (
               <Reveal key={i} delay={(i % 4) * 90} className={`img-zoom ${cls}`}>
                 <img src={src} alt="Clement Manyathela at work" loading="lazy" className="h-full w-full object-cover" />
