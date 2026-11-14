@@ -76,13 +76,13 @@ function Index() {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-ink py-8 text-ink-foreground">
-        <Reveal className="mx-auto mb-4 max-w-6xl px-6">
+      <section className="overflow-hidden bg-ink py-5 text-ink-foreground">
+        <Reveal className="mx-auto mb-3 max-w-6xl px-6">
           <p className="eyebrow text-bronze">In conversation with</p>
         </Reveal>
-        <div className="flex w-max animate-marquee gap-8 whitespace-nowrap font-display text-lg md:text-2xl hover:[animation-play-state:paused]">
+        <div className="flex w-max animate-marquee gap-6 whitespace-nowrap font-display text-sm md:text-base hover:[animation-play-state:paused]">
           {[...interviewees, ...interviewees].map((n, i) => (
-            <span key={i} className="flex items-center gap-8 transition-colors hover:text-bronze">{n}<span className="size-1.5 shrink-0 rounded-full bg-bronze" /></span>
+            <span key={i} className="flex items-center gap-6 transition-colors hover:text-bronze">{n}<span className="size-1 shrink-0 rounded-full bg-bronze" /></span>
           ))}
         </div>
       </section>
@@ -94,6 +94,8 @@ function Index() {
             {[
               [photos.keynote, "row-span-2"], [photos.panelBw, ""], [photos.van702, ""],
               [photos.heritage, "row-span-2"], [photos.hydrogen, "col-span-2"], [photos.awards, ""], [photos.moderating, "col-span-2"],
+              [photos.podiumSide, "row-span-2"], [photos.miningWeekWide, "col-span-2"], [photos.businessSmile, ""],
+              [photos.noExcuse, "row-span-2"], [photos.programmeDirector, "col-span-2"], [photos.miningWeek, ""],
             ].map(([src, cls], i) => (
               <Reveal key={i} delay={(i % 4) * 90} className={`img-zoom ${cls}`}>
                 <img src={src} alt="Clement Manyathela at work" loading="lazy" className="h-full w-full object-cover" />
