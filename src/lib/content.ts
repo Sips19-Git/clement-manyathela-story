@@ -46,6 +46,15 @@ export const experience = [
 
 export const education = { school: "University of Pretoria", degree: "Bachelor of Arts — Journalism", period: "2010 – 2012" };
 
+export const bio = {
+  lead: "Clement Manyathela is one of South Africa's most respected television and radio broadcasters, known for his authoritative yet welcoming presence, depth of insight, and ability to lead complex conversations with clarity and control.",
+  craft: "With a career spanning print, radio and television, Clement has built a reputation for asking the hard questions while maintaining balance, professionalism and respect. He is the host of the award-winning The Clement Manyathela Show on Radio 702, now in its sixth year, and presents the hard-hitting Face the Nation on SABC News.",
+  journey: "Originally from Vaalbank, Mpumalanga, Clement's journalism journey began after graduating with a BA in Journalism from the University of Pretoria. He went on to work as a political reporter for Pretoria News, PowerFM and Eyewitness News, covering major national and international stories — including elections in Zimbabwe and Lesotho.",
+  roles: "His broadcasting work has also included senior roles at e.tv, eNCA, Newzroom Afrika and PowerFM. Clement Manyathela is the founder of The Clement Manyathela Foundation and a trusted voice across Africa.",
+  whiteHouse: "His most recent and memorable work includes hosting The Clement Manyathela Show live in Washington DC, along with an engagement at the White House, where he questioned the President of the United States of America, Donald Trump, in the Oval Office.",
+  today: "Today, Clement is trusted by institutions, corporates and public sector leaders to moderate high-stakes discussions, MC major conferences, and facilitate dialogue that requires credibility, control of the room and intellectual rigour.",
+};
+
 export const interviewees = [
   "President Cyril Ramaphosa", "Chief Justice Mogoeng Mogoeng", "Former President Jacob Zuma", "Sir Richard Branson",
   "Governor Lesetja Kganyago", "Helen Zille", "Romeo Khumalo", "Lillian Dube", "Caiphus Semenya",
