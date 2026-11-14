@@ -15,7 +15,7 @@ const nav = [
 
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-4 z-50">
+    <header className="fixed inset-x-2 top-4 z-50 sm:inset-x-3 lg:inset-x-4">
       <nav className="grid w-full grid-cols-[auto_minmax(0,1fr)] items-center gap-2 rounded-full border border-border/60 bg-card/85 px-3 py-3 shadow-lg backdrop-blur transition-shadow sm:flex sm:justify-between sm:px-6 md:px-10">
         <Link to="/" className="shrink-0 font-display text-lg transition-colors hover:text-bronze">
           Clement<span className="text-bronze">.</span>
