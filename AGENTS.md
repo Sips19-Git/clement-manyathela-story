@@ -35,3 +35,5 @@ use the editor.
 - Animate notable interview names with right-origin CSS transforms, not font-size or layout changes, to prevent row shifts and respect reduced motion.
 - Mount the pointer-only custom cursor once in the shared layout; use passive pointer events, direct position updates, and a separate animated trail so clicks and touch input stay unaffected.
 - Keep the home cover photo full-section on every device with absolutely positioned object-cover imagery; on phones the cover fills the viewport with all copy and buttons grouped at the bottom, leaving the portrait clear above.
+
+- Serve optimized WebP photo pointers from shared content while retaining original pointers; eagerly fetch page photos with one high-priority preloaded cover and low-priority secondary images to reduce transfer size without delaying the first screen.

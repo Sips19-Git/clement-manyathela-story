@@ -4,6 +4,10 @@ import { photos, services, interviewees, tagline } from "@/lib/content";
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    links: [
+      { rel: "preconnect", href: new URL(photos.hero).origin },
+      { rel: "preload", as: "image", href: photos.hero, fetchPriority: "high" },
+    ],
     meta: [
       { title: "Clement Manyathela — Broadcaster, Moderator & MC" },
       { name: "description", content: "Award-winning radio and television broadcaster, host of The Clement Manyathela Show on Radio 702, panel moderator and MC." },
@@ -22,7 +26,7 @@ function Index() {
   return (
     <main>
       <section className="home-cover relative min-h-[100svh] overflow-hidden bg-ink text-ink-foreground sm:min-h-[800px] lg:min-h-[720px]">
-        <img src={photos.hero} alt="Clement Manyathela smiling in a blue suit at a corporate event" className="absolute inset-0 h-full w-full object-cover object-[50%_center] animate-rise lg:object-center" />
+        <img src={photos.hero} loading="eager" decoding="async" fetchPriority="high" alt="Clement Manyathela smiling in a blue suit at a corporate event" className="absolute inset-0 h-full w-full object-cover object-[50%_center] animate-rise lg:object-center" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/15 to-ink/95 sm:hidden" />
         <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-ink/85 via-ink/45 to-ink/10 sm:block lg:from-ink/90 lg:via-ink/35" />
         <div className="relative flex min-h-[inherit] w-full flex-col items-start px-5 pb-10 pt-24 sm:px-8 sm:pb-8 lg:px-14 lg:pb-12 lg:pt-28">
@@ -45,7 +49,7 @@ function Index() {
       <section className="relative bg-background px-6 pt-24 pb-28">
         <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
           <Reveal className="img-zoom aspect-[4/5]">
-            <img src={photos.studio} alt="Clement in the Radio 702 studio" loading="lazy" className="h-full w-full object-cover" />
+            <img src={photos.studio} alt="Clement in the Radio 702 studio" loading="eager" decoding="async" fetchPriority="low" className="h-full w-full object-cover" />
           </Reveal>
           <Reveal delay={150}>
             <p className="eyebrow text-bronze">On air</p>
@@ -69,7 +73,7 @@ function Index() {
             {services.map((s, i) => (
               <Reveal key={s.title} delay={i * 120}>
                 <Link to="/contact" className="group card-lift block bg-card">
-                  <div className="img-zoom aspect-[4/3]"><img src={s.img} alt={s.title} loading="lazy" className="h-full w-full object-cover" /></div>
+                  <div className="img-zoom aspect-[4/3]"><img src={s.img} alt={s.title} loading="eager" decoding="async" fetchPriority="low" className="h-full w-full object-cover" /></div>
                   <div className="p-7">
                     <h3 className="text-2xl transition-colors group-hover:text-bronze">{s.title}</h3>
                     <p className="mt-3 text-muted-foreground">{s.body}</p>
@@ -104,7 +108,7 @@ function Index() {
               [photos.classroom, "row-span-2"], [photos.galaHost, "row-span-2"],
             ].map(([src, cls], i) => (
               <Reveal key={i} delay={(i % 4) * 90} className={`img-zoom ${cls}`}>
-                <img src={src} alt="Clement Manyathela at work" loading="lazy" className="h-full w-full object-cover" />
+                <img src={src} alt="Clement Manyathela at work" loading="eager" decoding="async" fetchPriority="low" className="h-full w-full object-cover" />
               </Reveal>
             ))}
           </div>

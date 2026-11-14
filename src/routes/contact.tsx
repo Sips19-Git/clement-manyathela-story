@@ -7,6 +7,10 @@ import { photos } from "@/lib/content";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
+    links: [
+      { rel: "preconnect", href: new URL(photos.awards).origin },
+      { rel: "preload", as: "image", href: photos.awards, fetchPriority: "high" },
+    ],
     meta: [
       { title: "Book Clement Manyathela — Speaking, Launches & Events" },
       { name: "description", content: "Booking form for Clement Manyathela: public speaking, product launch events, corporate events and panel moderation." },
@@ -59,7 +63,7 @@ function Contact() {
           <p className="eyebrow text-bronze animate-rise">Bookings</p>
           <h1 className="mt-4 text-6xl animate-rise [animation-delay:100ms] md:text-7xl">Book Clement<span className="text-bronze">.</span></h1>
           <p className="mt-6 max-w-sm text-muted-foreground animate-rise [animation-delay:200ms]">Public speaking, product launch events, corporate events and panel moderation. Share a few details and the team will get back to you.</p>
-          <Reveal className="img-zoom mt-10 hidden aspect-[4/3] md:block"><img src={photos.awards} alt="Clement hosting an awards ceremony" loading="lazy" className="h-full w-full object-cover" /></Reveal>
+          <Reveal className="img-zoom mt-10 hidden aspect-[4/3] md:block"><img src={photos.awards} alt="Clement hosting an awards ceremony" loading="eager" decoding="async" fetchPriority="high" className="h-full w-full object-cover" /></Reveal>
         </div>
         <Reveal delay={150}>
           {status === "done" ? (
