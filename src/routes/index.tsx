@@ -22,15 +22,15 @@ function Index() {
       <section className="home-cover relative grid overflow-hidden bg-ink text-ink-foreground">
         <img src={photos.hero} alt="Clement Manyathela smiling in a blue suit at a corporate event" className="col-start-1 row-start-2 h-auto w-full self-end animate-rise lg:row-start-1" />
         <div className="pointer-events-none col-start-1 row-start-1 hidden bg-gradient-to-r from-ink/90 via-ink/35 to-transparent lg:block" />
-        <div className="relative col-start-1 row-start-1 flex w-full flex-col items-start px-6 pb-10 pt-28 sm:px-8 lg:min-h-[640px] lg:px-14 lg:pb-20 lg:pt-32">
+        <div className="relative col-start-1 row-start-1 flex w-full flex-col items-start px-6 pb-6 pt-24 sm:px-8 lg:min-h-[640px] lg:px-14 lg:pb-20 lg:pt-32">
           <p className="max-w-sm text-sm font-medium uppercase leading-relaxed text-bronze animate-rise md:text-base">{tagline}</p>
-          <h1 className="mt-4 max-w-[480px] text-[44px] leading-[1.05] animate-rise [animation-delay:120ms] sm:text-[64px] lg:text-[80px]">
+          <h1 className="mt-4 max-w-[480px] text-[36px] leading-[1.05] animate-rise [animation-delay:120ms] sm:text-[64px] lg:text-[80px]">
             Conversations that move a nation<span className="text-bronze">.</span>
           </h1>
-          <p className="mt-4 max-w-md text-lg leading-relaxed text-ink-foreground/80 animate-rise [animation-delay:240ms] md:text-xl">
+          <p className="mt-4 max-w-md text-base leading-relaxed text-ink-foreground/80 animate-rise [animation-delay:240ms] sm:text-lg md:text-xl">
             Host of <em>The Clement Manyathela Show</em> on Radio 702 — and one of South Africa's most sought-after interviewers, speakers and MCs.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3 pt-6 animate-rise [animation-delay:360ms] lg:mt-auto">
+          <div className="mt-6 flex flex-wrap gap-3 animate-rise [animation-delay:360ms] lg:mt-auto lg:pt-6">
             <Link to="/contact" className="btn-pill bg-bronze text-accent-foreground hover:bg-ink-foreground hover:text-ink">Book Clement</Link>
             <Link to="/about" className="btn-pill border border-ink-foreground/40 hover:bg-ink-foreground hover:text-ink">His story</Link>
           </div>
