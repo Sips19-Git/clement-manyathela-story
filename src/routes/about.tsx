@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/reveal";
-import { photos, interviewees, education } from "@/lib/content";
+import { photos, interviewees, education, bio } from "@/lib/content";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -10,9 +10,9 @@ export const Route = createFileRoute("/about")({
     ],
     meta: [
       { title: "About — Clement Manyathela" },
-      { name: "description", content: "From Vaalbank, Mpumalanga to Radio 702: the story of broadcaster Clement Manyathela." },
+      { name: "description", content: "Host of the award-winning The Clement Manyathela Show on Radio 702 and Face the Nation on SABC News — founder of The Clement Manyathela Foundation." },
       { property: "og:title", content: "About Clement Manyathela" },
-      { property: "og:description", content: "From Vaalbank, Mpumalanga to Radio 702 and SABC's Face The Nation." },
+      { property: "og:description", content: "Broadcaster, moderator and MC — from Pretoria News to the Oval Office." },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:image", content: photos.heritage },
@@ -35,12 +35,32 @@ function About() {
           <h1 className="text-7xl leading-[0.85] md:text-9xl">about<br />me.</h1>
           <div className="rule-bronze my-10 w-full max-w-sm" />
           <div className="max-w-md space-y-6 text-lg leading-relaxed">
-            <p>I'm Clement — originally from Vaalbank, Mpumalanga, and a proud alumnus of the University of Pretoria, where I earned a Bachelor of Arts in Journalism.</p>
-            <p>I've worked in broadcast journalism for more than nine years, many of them reporting on politics — from weekend reporting at the Pretoria News while studying, to SABC News Online, Power FM, Eyewitness News and hosting The Morning Show on e.tv.</p>
-            <p>Today I host <em>The Clement Manyathela Show</em> on weekdays on Radio 702 and anchor <em>Face The Nation</em> on SABC News.</p>
-            <p>Facilitating conversations with some of the world's most celebrated public figures has made me a sought-after interviewer, speaker and MC.</p>
+            <p>{bio.lead}</p>
+            <p>{bio.craft}</p>
           </div>
         </div>
+      </section>
+
+      <section className="px-6 pb-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-[1.15fr_1fr]">
+          <Reveal>
+            <p className="eyebrow text-bronze">The journey</p>
+            <h2 className="mt-4 text-5xl md:text-6xl">From the newsroom to<span className="text-bronze"> the world stage.</span></h2>
+            <div className="rule-bronze my-8 w-full max-w-sm" />
+            <div className="max-w-xl space-y-6 text-lg leading-relaxed">
+              <p>{bio.journey}</p>
+              <p>{bio.roles}</p>
+            </div>
+          </Reveal>
+          <Reveal delay={150} className="img-zoom mx-auto aspect-[3/4] w-full max-w-md md:justify-self-end">
+            <img src={photos.fieldInterview} alt="Clement Manyathela conducting a field interview beside the Radio 702 van" loading="eager" decoding="async" fetchPriority="low" className="h-full w-full object-cover" />
+          </Reveal>
+        </div>
+
+        <Reveal className="mx-auto mt-16 max-w-4xl border-y border-bronze/40 bg-secondary px-8 py-12 text-center">
+          <p className="eyebrow text-bronze">A memorable moment</p>
+          <p className="mx-auto mt-5 max-w-2xl font-display text-2xl leading-snug md:text-3xl">{bio.whiteHouse}</p>
+        </Reveal>
       </section>
 
       <section className="bg-ink px-6 py-24 text-ink-foreground">
@@ -70,6 +90,16 @@ function About() {
             ))}
           </ul>
         </div>
+      </section>
+
+      <section className="relative isolate overflow-hidden">
+        <img src={photos.miningWeekWide} alt="" aria-hidden="true" loading="eager" decoding="async" fetchPriority="low" className="absolute inset-0 -z-10 h-full w-full object-cover" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-ink/85" />
+        <Reveal className="mx-auto max-w-4xl px-6 py-24 text-center text-ink-foreground">
+          <p className="eyebrow text-bronze">Today</p>
+          <p className="mt-6 text-lg leading-relaxed md:text-2xl">{bio.today}</p>
+          <Link to="/contact" className="btn-pill mt-10 bg-bronze text-accent-foreground hover:bg-ink-foreground hover:text-ink">Book Clement</Link>
+        </Reveal>
       </section>
 
       <section className="bg-secondary px-6 py-24">
