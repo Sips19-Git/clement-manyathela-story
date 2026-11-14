@@ -77,7 +77,7 @@ export function SiteFooter() {
         </div>
         <div className="mt-20 border-t border-ink-foreground/15 pt-8">
           <div className="eyebrow flex flex-wrap items-center justify-center gap-6 text-ink-foreground">
-            <span>Broadcaster.</span><span className="text-bronze">✦</span><span>Moderator.</span><span className="text-bronze">✦</span><span>MC.</span>
+            <span>Broadcaster.</span><span className="text-bronze">•</span><span>Moderator.</span><span className="text-bronze">•</span><span>MC.</span>
           </div>
           <p className="mt-6 text-center text-xs text-ink-foreground/50">© {new Date().getFullYear()} Clement Manyathela · Johannesburg, South Africa</p>
         </div>

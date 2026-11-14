@@ -31,7 +31,7 @@ function Index() {
             Conversations that move a nation<span className="text-bronze">.</span>
           </h1>
           <div className="w-full pt-6 sm:contents">
-          <p className="max-w-[520px] text-lg leading-relaxed sm:mt-5 text-ink-foreground/90 animate-rise [animation-delay:240ms] sm:max-w-[360px] sm:text-2xl lg:max-w-[520px]">
+          <p className="max-w-[520px] text-base leading-relaxed sm:mt-5 text-ink-foreground/90 animate-rise [animation-delay:240ms] sm:max-w-[360px] sm:text-xl lg:max-w-[520px]">
             Host of <em>The Clement Manyathela Show</em> on Radio 702 — and one of South Africa's most sought-after interviewers, speakers and MCs.
           </p>
           <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:flex sm:flex-wrap animate-rise [animation-delay:360ms] lg:mt-auto lg:pt-6">
