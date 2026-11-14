@@ -68,13 +68,13 @@ function About() {
 
       <section className="bg-secondary px-6 py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
-          <Reveal className="img-zoom aspect-[4/3]"><img src={photos.panelBw} alt="Clement moderating a panel" loading="lazy" className="h-full w-full object-cover" /></Reveal>
           <Reveal delay={150}>
             <p className="eyebrow text-bronze">Education</p>
             <h2 className="mt-4 text-4xl md:text-5xl">{education.school}</h2>
             <p className="mt-4 text-lg text-muted-foreground">{education.degree} · {education.period}</p>
             <Link to="/contact" className="btn-pill mt-10 bg-primary text-primary-foreground hover:bg-bronze">Book Clement</Link>
           </Reveal>
+          <Reveal className="img-zoom aspect-[4/3]"><img src={photos.panelBw} alt="Clement moderating a panel" loading="lazy" className="h-full w-full object-cover" /></Reveal>
         </div>
       </section>
     </main>

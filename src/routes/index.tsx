@@ -19,18 +19,18 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main>
-      <section className="relative flex min-h-screen items-end overflow-hidden bg-ink text-ink-foreground">
+      <section className="home-cover relative flex min-h-[560px] items-end overflow-hidden bg-ink text-ink-foreground">
         <img src={photos.hero} alt="Clement Manyathela smiling in a blue suit at a corporate event" className="absolute inset-0 h-full w-full object-cover object-[65%_center] opacity-80 animate-rise md:object-center" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/10" />
-        <div className="relative w-full px-6 pb-24 md:px-10">
-          <p className="eyebrow text-bronze animate-rise">{tagline}</p>
-          <h1 className="mt-5 max-w-3xl text-6xl leading-[0.95] animate-rise [animation-delay:120ms] md:text-8xl">
+        <div className="relative w-full px-6 pb-20 pt-32 md:px-10">
+          <p className="max-w-md text-[10px] font-medium uppercase leading-relaxed text-bronze animate-rise">{tagline}</p>
+          <h1 className="mt-4 max-w-md text-4xl leading-tight animate-rise [animation-delay:120ms] md:text-5xl">
             Conversations that move a nation<span className="text-bronze">.</span>
           </h1>
-          <p className="mt-6 max-w-lg text-lg text-ink-foreground/80 animate-rise [animation-delay:240ms]">
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-foreground/80 animate-rise [animation-delay:240ms]">
             Host of <em>The Clement Manyathela Show</em> on Radio 702 — and one of South Africa's most sought-after interviewers, speakers and MCs.
           </p>
-          <div className="mt-10 flex flex-wrap gap-4 animate-rise [animation-delay:360ms]">
+          <div className="mt-6 flex flex-wrap gap-3 animate-rise [animation-delay:360ms]">
             <Link to="/contact" className="btn-pill bg-bronze text-accent-foreground hover:bg-ink-foreground hover:text-ink">Book Clement</Link>
             <Link to="/about" className="btn-pill border border-ink-foreground/40 hover:bg-ink-foreground hover:text-ink">His story</Link>
           </div>
@@ -96,6 +96,7 @@ function Index() {
               [photos.heritage, "row-span-2"], [photos.hydrogen, "col-span-2"], [photos.awards, ""], [photos.moderating, "col-span-2"],
               [photos.podiumSide, "row-span-2"], [photos.miningWeekWide, "col-span-2"], [photos.businessSmile, ""],
               [photos.noExcuse, "row-span-2"], [photos.programmeDirector, "col-span-2"], [photos.miningWeek, ""],
+              [photos.classroom, "row-span-2"], [photos.galaHost, "row-span-2"],
             ].map(([src, cls], i) => (
               <Reveal key={i} delay={(i % 4) * 90} className={`img-zoom ${cls}`}>
                 <img src={src} alt="Clement Manyathela at work" loading="lazy" className="h-full w-full object-cover" />

@@ -17,6 +17,8 @@ import p18 from "@/assets/photos/p18.png.asset.json";
 import p19 from "@/assets/photos/p19.png.asset.json";
 import p20 from "@/assets/photos/p20.png.asset.json";
 import p21 from "@/assets/photos/p21.png.asset.json";
+import p22 from "@/assets/photos/p22.png.asset.json";
+import p23 from "@/assets/photos/p23.png.asset.json";
 
 export const photos = {
   keynote: p3.url, panelBw: p4.url, van702: p5.url, heritage: p6.url, moderating: p7.url,
@@ -24,6 +26,7 @@ export const photos = {
   miningWeek: p12.url, podiumSide: p13.url, miningWeekWide: p14.url, programmeDirector: p15.url,
   businessSmile: p16.url, noExcuse: p17.url, fieldInterview: p18.url,
   hero: p19.url, corporateEvents: p20.url, liveReporting: p21.url,
+  classroom: p22.url, galaHost: p23.url,
 };
 
 export const tagline = "Award Winning Radio and Television Broadcaster | Panel Moderator | MC";
