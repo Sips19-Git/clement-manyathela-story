@@ -16,13 +16,13 @@ const nav = [
 export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-4 z-50">
-      <nav className="flex w-full items-center justify-between gap-2 rounded-full border border-border/60 bg-card/85 px-3 py-3 shadow-lg backdrop-blur transition-shadow sm:px-6 md:px-10">
-        <Link to="/" className="font-display text-lg transition-colors hover:text-bronze">
+      <nav className="grid w-full grid-cols-[auto_minmax(0,1fr)] items-center gap-2 rounded-full border border-border/60 bg-card/85 px-3 py-3 shadow-lg backdrop-blur transition-shadow sm:flex sm:justify-between sm:px-6 md:px-10">
+        <Link to="/" className="shrink-0 font-display text-lg transition-colors hover:text-bronze">
           Clement<span className="text-bronze">.</span>
         </Link>
-        <ul className="flex gap-3 text-xs sm:gap-4 sm:text-sm md:gap-6">
+        <ul className="flex min-w-0 flex-wrap justify-end gap-x-2 gap-y-1 text-[10px] sm:gap-4 sm:text-sm md:gap-6">
           {nav.map((n) => (
-            <li key={n.to} className={n.to === "/work" ? "hidden sm:block" : ""}>
+            <li key={n.to}>
               <Link to={n.to} activeOptions={{ exact: true }}
                 className="link-underline text-muted-foreground hover:text-foreground data-[status=active]:text-foreground">
                 {n.label}

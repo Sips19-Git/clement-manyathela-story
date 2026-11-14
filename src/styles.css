@@ -197,7 +197,7 @@
 }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 
-.home-cover { min-height: max(600px, 96svh); }
+.home-cover { min-width: 0; }
 .glowing-cursor, .cursor-trail {
   position: fixed;
   top: 0;
